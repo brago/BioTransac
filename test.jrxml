@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 3.5.1  -->
+<!-- 2015-12-29T13:00:06 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#FBFDFF" lineSpacing="Single"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Dataset1">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+		<queryString>
+			<![CDATA[SELECT * from BIO_CARTE]]>
+		</queryString>
+		<field name="NUMCART" class="java.lang.String"/>
+		<field name="DATEDEVAL" class="java.sql.Timestamp"/>
+		<field name="DATEFINVAL" class="java.sql.Timestamp"/>
+		<field name="CODPROD" class="java.math.BigDecimal"/>
+		<field name="NOM" class="java.lang.String"/>
+		<field name="PRENOMS" class="java.lang.String"/>
+		<field name="NOMJEUNFIL" class="java.lang.String"/>
+		<field name="FAX" class="java.lang.String"/>
+		<field name="EMAIL" class="java.lang.String"/>
+		<field name="DATENAISS" class="java.lang.String"/>
+		<field name="ADRESSE" class="java.lang.String"/>
+		<field name="STATUT" class="java.math.BigDecimal"/>
+		<field name="NOMEMBOSSE" class="java.lang.String"/>
+		<field name="SIG" class="java.lang.Object"/>
+		<field name="CODBEN" class="java.math.BigDecimal"/>
+		<field name="LIEUNAISS" class="java.lang.String"/>
+		<field name="NUMCMD" class="java.math.BigDecimal"/>
+		<field name="PHOTO" class="oracle.sql.BLOB"/>
+		<field name="NOMMERE" class="java.lang.String"/>
+		<field name="PRENOMMERE" class="java.lang.String"/>
+		<field name="NOMPERE" class="java.lang.String"/>
+		<field name="PRENOMPERE" class="java.lang.String"/>
+		<field name="CLIENT" class="java.lang.String"/>
+		<field name="SUPPRIMER" class="java.math.BigDecimal"/>
+		<field name="NUMPIECE" class="java.lang.String"/>
+		<field name="TYPEPIECE" class="java.lang.String"/>
+		<field name="TYPECARTE" class="java.lang.String"/>
+		<field name="NUMLOT" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select * from BIO_CARTE]]>
+	</queryString>
+	<field name="NUMCART" class="java.lang.String"/>
+	<field name="DATEDEVAL" class="java.sql.Timestamp"/>
+	<field name="DATEFINVAL" class="java.sql.Timestamp"/>
+	<field name="CODPROD" class="java.math.BigDecimal"/>
+	<field name="NOM" class="java.lang.String"/>
+	<field name="PRENOMS" class="java.lang.String"/>
+	<field name="NOMJEUNFIL" class="java.lang.String"/>
+	<field name="FAX" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="DATENAISS" class="java.lang.String"/>
+	<field name="ADRESSE" class="java.lang.String"/>
+	<field name="STATUT" class="java.math.BigDecimal"/>
+	<field name="NOMEMBOSSE" class="java.lang.String"/>
+	<field name="SIG" class="java.lang.Object"/>
+	<field name="CODBEN" class="java.math.BigDecimal"/>
+	<field name="LIEUNAISS" class="java.lang.String"/>
+	<field name="NUMCMD" class="java.math.BigDecimal"/>
+	<field name="PHOTO" class="oracle.sql.BLOB"/>
+	<field name="NOMMERE" class="java.lang.String"/>
+	<field name="PRENOMMERE" class="java.lang.String"/>
+	<field name="NOMPERE" class="java.lang.String"/>
+	<field name="PRENOMPERE" class="java.lang.String"/>
+	<field name="CLIENT" class="java.lang.String"/>
+	<field name="SUPPRIMER" class="java.math.BigDecimal"/>
+	<field name="NUMPIECE" class="java.lang.String"/>
+	<field name="TYPEPIECE" class="java.lang.String"/>
+	<field name="TYPECARTE" class="java.lang.String"/>
+	<field name="NUMLOT" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="79"/>
+	</title>
+	<pageHeader>
+		<band height="35"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="141"/>
+	</columnHeader>
+	<detail>
+		<band height="256"/>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>

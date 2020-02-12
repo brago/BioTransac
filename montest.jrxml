@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 3.5.1  -->
+<!-- 2016-06-27T14:34:12 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="montest" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<parameter name="STATUTCARTE" class="java.lang.String"/>
+	<parameter name="sqlDatedeb" class="java.lang.String"/>
+	<parameter name="sqlDatefin" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM BIO_CARTE
+INNER JOIN BIO_BENEFICIAIRE
+ON BIO_CARTE.CODBEN=BIO_BENEFICIAIRE.CODBEN
+INNER JOIN BIO_COMMANDE
+ON BIO_CARTE.NUMCART=BIO_COMMANDE.NUMCARTE
+INNER JOIN BIO_STATUT_CARTE
+ON BIO_CARTE.STATUT=BIO_STATUT_CARTE.IDSTATUT
+INNER JOIN BIO_PRODUIT
+ON BIO_CARTE.CODPROD=BIO_PRODUIT.CODPROD]]>
+	</queryString>
+	<field name="NUMCART" class="java.lang.String"/>
+	<field name="DATEDEVAL" class="java.sql.Timestamp"/>
+	<field name="DATEFINVAL" class="java.sql.Timestamp"/>
+	<field name="CODPROD" class="java.math.BigDecimal"/>
+	<field name="STATUT" class="java.math.BigDecimal"/>
+	<field name="NOMEMBOSSE" class="java.lang.String"/>
+	<field name="SIG" class="oracle.sql.BINARY_FLOAT"/>
+	<field name="CODBEN" class="java.math.BigDecimal"/>
+	<field name="NUMCMD" class="java.math.BigDecimal"/>
+	<field name="PHOTO" class="oracle.jdbc.OracleBlob"/>
+	<field name="SUPPRIMER" class="java.math.BigDecimal"/>
+	<field name="NUMLOT" class="java.lang.String"/>
+	<field name="PROFIL" class="java.lang.String"/>
+	<field name="DATEMODIF" class="java.sql.Timestamp"/>
+	<field name="DATERETRAIT" class="java.sql.Timestamp"/>
+	<field name="COLUMN_16" class="java.math.BigDecimal"/>
+	<field name="NOM" class="java.lang.String"/>
+	<field name="PRENOMS" class="java.lang.String"/>
+	<field name="NOMJEUNFIL" class="java.lang.String"/>
+	<field name="FAX" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="DATENAISS" class="java.sql.Timestamp"/>
+	<field name="ADRESSE" class="java.lang.String"/>
+	<field name="DATEENREGISTRE" class="java.sql.Timestamp"/>
+	<field name="COLUMN_25" class="oracle.sql.BINARY_FLOAT"/>
+	<field name="CLIENT" class="java.lang.String"/>
+	<field name="TITRE" class="java.lang.String"/>
+	<field name="LIEUNAISS" class="java.lang.String"/>
+	<field name="TELFIX" class="java.lang.String"/>
+	<field name="TELMOB" class="java.lang.String"/>
+	<field name="COLUMN_31" class="java.math.BigDecimal"/>
+	<field name="SEXE" class="java.lang.String"/>
+	<field name="PROFESSION" class="java.lang.String"/>
+	<field name="NOMPERE" class="java.lang.String"/>
+	<field name="PRENOMPERE" class="java.lang.String"/>
+	<field name="NOMMERE" class="java.lang.String"/>
+	<field name="PRENOMMERE" class="java.lang.String"/>
+	<field name="RESIDENCE" class="java.lang.String"/>
+	<field name="CODELOCALITE" class="java.lang.String"/>
+	<field name="DATEDELIVRANCE" class="java.sql.Timestamp"/>
+	<field name="TYPPIECE" class="java.lang.String"/>
+	<field name="NUMPIECE" class="java.lang.String"/>
+	<field name="TYPEBENEF" class="java.lang.String"/>
+	<field name="COLUMN_44" class="java.math.BigDecimal"/>
+	<field name="COMPTE" class="java.lang.String"/>
+	<field name="DATECMD" class="java.sql.Timestamp"/>
+	<field name="COLUMN_47" class="java.math.BigDecimal"/>
+	<field name="COLUMN_48" class="java.lang.String"/>
+	<field name="COLUMN_49" class="java.lang.String"/>
+	<field name="COLUMN_50" class="java.lang.String"/>
+	<field name="COLUMN_51" class="oracle.sql.BINARY_FLOAT"/>
+	<field name="COLUMN_52" class="java.math.BigDecimal"/>
+	<field name="COLUMN_53" class="java.lang.String"/>
+	<field name="NUMFORM" class="java.lang.String"/>
+	<field name="NUMCONTRAT" class="java.lang.String"/>
+	<field name="NUMCARTE" class="java.lang.String"/>
+	<field name="NUMLOTS" class="java.lang.String"/>
+	<field name="PROCURATION" class="oracle.jdbc.OracleBlob"/>
+	<field name="PIECE" class="java.lang.String"/>
+	<field name="PRODUIT" class="java.lang.String"/>
+	<field name="COLUMN_61" class="java.sql.Timestamp"/>
+	<field name="COLUMN_62" class="java.lang.String"/>
+	<field name="IDSTATUT" class="java.lang.String"/>
+	<field name="LIBELLESTATUT" class="java.lang.String"/>
+	<field name="DESCRIPTION" class="java.lang.String"/>
+	<field name="COLUMN_66" class="java.math.BigDecimal"/>
+	<field name="COLUMN_67" class="java.lang.String"/>
+	<field name="MONTMAX" class="java.math.BigDecimal"/>
+	<field name="NBRETRAIJRS" class="java.math.BigDecimal"/>
+	<field name="NBRETRAISEM" class="java.math.BigDecimal"/>
+	<field name="CUMRETRAIJRS" class="java.math.BigDecimal"/>
+	<field name="CUMRETRAISEM" class="java.math.BigDecimal"/>
+	<field name="LIEURETRAI" class="java.math.BigDecimal"/>
+	<field name="VALIDITE" class="java.math.BigDecimal"/>
+	<field name="ACHAT" class="java.lang.String"/>
+	<field name="PRIXCARTE" class="java.math.BigDecimal"/>
+	<field name="DATECREATION" class="java.sql.Timestamp"/>
+	<field name="RELATION" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="79"/>
+	</title>
+	<pageHeader>
+		<band height="35"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61"/>
+	</columnHeader>
+	<detail>
+		<band height="125"/>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 3.5.1  -->
+<!-- 2016-06-07T17:11:17 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+		<queryString>
+			<![CDATA[select * from LIGNECRITURE]]>
+		</queryString>
+		<field name="IDLIGNEECRIT" class="java.math.BigDecimal"/>
+		<field name="IDPERIODEJOURNAL" class="java.lang.String"/>
+		<field name="IDCPTE" class="java.math.BigDecimal"/>
+		<field name="NUMCOMPTE" class="java.lang.String"/>
+		<field name="NUMPRET" class="java.lang.String"/>
+		<field name="CODCOM" class="java.math.BigDecimal"/>
+		<field name="JOURLIGNEECRITURE" class="java.lang.String"/>
+		<field name="MOTPASSE" class="java.lang.String"/>
+		<field name="DATECRITURE" class="java.sql.Timestamp"/>
+		<field name="NUMPIECE" class="java.lang.String"/>
+		<field name="LIBECRITURE" class="java.lang.String"/>
+		<field name="DEBITECRITURE" class="java.math.BigDecimal"/>
+		<field name="CREDITECRITURE" class="java.math.BigDecimal"/>
+		<field name="NUMCPTIER" class="java.lang.String"/>
+		<field name="VALIDER" class="java.math.BigDecimal"/>
+		<field name="LETTRAGE" class="java.lang.String"/>
+		<field name="HEURE1" class="java.lang.String"/>
+		<field name="REGUL" class="java.lang.String"/>
+		<field name="AN" class="java.math.BigDecimal"/>
+		<field name="IDTIERS" class="java.math.BigDecimal"/>
+		<field name="IDOPERATION" class="java.math.BigDecimal"/>
+		<field name="IDPERSO" class="java.math.BigDecimal"/>
+		<field name="BAMORTISSEMENT" class="java.math.BigDecimal"/>
+		<field name="TYPEOPERATION" class="java.math.BigDecimal"/>
+		<field name="BLETTRAGE" class="java.math.BigDecimal"/>
+		<field name="NUMCARTE" class="java.lang.String"/>
+		<field name="NUMCARTEUSER" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="Param" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from LIGNECRITURE WHERE NUMPIECE=$P{Param}]]>
+	</queryString>
+	<field name="IDLIGNEECRIT" class="java.math.BigDecimal"/>
+	<field name="IDPERIODEJOURNAL" class="java.lang.String"/>
+	<field name="IDCPTE" class="java.math.BigDecimal"/>
+	<field name="NUMCOMPTE" class="java.lang.String"/>
+	<field name="NUMPRET" class="java.lang.String"/>
+	<field name="CODCOM" class="java.math.BigDecimal"/>
+	<field name="JOURLIGNEECRITURE" class="java.lang.String"/>
+	<field name="MOTPASSE" class="java.lang.String"/>
+	<field name="DATECRITURE" class="java.sql.Timestamp"/>
+	<field name="NUMPIECE" class="java.lang.String"/>
+	<field name="LIBECRITURE" class="java.lang.String"/>
+	<field name="DEBITECRITURE" class="java.math.BigDecimal"/>
+	<field name="CREDITECRITURE" class="java.math.BigDecimal"/>
+	<field name="NUMCPTIER" class="java.lang.String"/>
+	<field name="VALIDER" class="java.math.BigDecimal"/>
+	<field name="LETTRAGE" class="java.lang.String"/>
+	<field name="HEURE1" class="java.lang.String"/>
+	<field name="REGUL" class="java.lang.String"/>
+	<field name="AN" class="java.math.BigDecimal"/>
+	<field name="IDTIERS" class="java.math.BigDecimal"/>
+	<field name="IDOPERATION" class="java.math.BigDecimal"/>
+	<field name="IDPERSO" class="java.math.BigDecimal"/>
+	<field name="BAMORTISSEMENT" class="java.math.BigDecimal"/>
+	<field name="TYPEOPERATION" class="java.math.BigDecimal"/>
+	<field name="BLETTRAGE" class="java.math.BigDecimal"/>
+	<field name="NUMCARTE" class="java.lang.String"/>
+	<field name="NUMCARTEUSER" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="79"/>
+	</title>
+	<pageHeader>
+		<band height="35"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61"/>
+	</columnHeader>
+	<detail>
+		<band height="269"/>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>

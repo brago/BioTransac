@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 3.5.1  -->
+<!-- 2016-10-21T17:12:56 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportbt" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<queryString>
+		<![CDATA[select * from LIGNECRITURE, DETAILBILLETAGE WHERE DETAILBILLETAGE.NUMRECUR = LIGNECRITURE.NUMPIECE AND LIGNECRITURE.NUMPIECE = '0171288' AND LIGNECRITURE.LIBECRITURE = 'Retrait' AND LIGNECRITURE.DEBITECRITURE <> '0']]>
+	</queryString>
+	<field name="IDLIGNEECRIT" class="java.math.BigDecimal"/>
+	<field name="IDPERIODEJOURNAL" class="java.lang.String"/>
+	<field name="IDCPTE" class="java.math.BigDecimal"/>
+	<field name="NUMCOMPTE" class="java.lang.String"/>
+	<field name="NUMPRET" class="java.lang.String"/>
+	<field name="CODCOM" class="java.math.BigDecimal"/>
+	<field name="JOURLIGNEECRITURE" class="java.lang.String"/>
+	<field name="MOTPASSE" class="java.lang.String"/>
+	<field name="DATECRITURE" class="java.sql.Timestamp"/>
+	<field name="NUMPIECE" class="java.lang.String"/>
+	<field name="LIBECRITURE" class="java.lang.String"/>
+	<field name="DEBITECRITURE" class="java.math.BigDecimal"/>
+	<field name="CREDITECRITURE" class="java.math.BigDecimal"/>
+	<field name="NUMCPTIER" class="java.lang.String"/>
+	<field name="VALIDER" class="java.math.BigDecimal"/>
+	<field name="LETTRAGE" class="java.lang.String"/>
+	<field name="HEURE1" class="java.lang.String"/>
+	<field name="REGUL" class="java.lang.String"/>
+	<field name="AN" class="java.math.BigDecimal"/>
+	<field name="IDTIERS" class="java.math.BigDecimal"/>
+	<field name="IDOPERATION" class="java.math.BigDecimal"/>
+	<field name="IDPERSO" class="java.math.BigDecimal"/>
+	<field name="BAMORTISSEMENT" class="java.math.BigDecimal"/>
+	<field name="TYPEOPERATION" class="java.math.BigDecimal"/>
+	<field name="BLETTRAGE" class="java.math.BigDecimal"/>
+	<field name="NUMCARTE" class="java.lang.String"/>
+	<field name="NUMCARTEUSER" class="java.lang.String"/>
+	<field name="NUMMONNAIE" class="java.math.BigDecimal"/>
+	<field name="MONNAIE" class="java.math.BigDecimal"/>
+	<field name="NUMRECUV" class="java.lang.String"/>
+	<field name="NUMRECUR" class="java.lang.String"/>
+	<field name="NBMONNAIE" class="java.math.BigDecimal"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="79"/>
+	</title>
+	<pageHeader>
+		<band height="35"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61"/>
+	</columnHeader>
+	<detail>
+		<band height="134">
+			<textField>
+				<reportElement x="219" y="5" width="100" height="15"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression><![CDATA[$F{NUMMONNAIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="6" width="100" height="14"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression><![CDATA[$F{MONNAIE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="5" width="100" height="16"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression><![CDATA[$F{NBMONNAIE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 3.5.1  -->
+<!-- 2015-12-28T15:34:02 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="liste_cartes_en_cours_commande" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<parameter name="DATEDEBUT" class="java.lang.String"/>
+	<parameter name="DATEFIN" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from BIO_COMMANDE where DATECMD between $P{DATEDEBUT} and $P{DATEFIN}]]>
+	</queryString>
+	<field name="NUMCMD" class="java.math.BigDecimal"/>
+	<field name="COMPTE" class="java.lang.String"/>
+	<field name="DATECMD" class="java.lang.String"/>
+	<field name="CODPROD" class="java.math.BigDecimal"/>
+	<field name="NOM" class="java.lang.String"/>
+	<field name="PRENOMS" class="java.lang.String"/>
+	<field name="NOMJEUNFIL" class="java.lang.String"/>
+	<field name="FAX" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="DATENAISS" class="java.lang.String"/>
+	<field name="TYPPIECE" class="java.lang.String"/>
+	<field name="ADRESSE" class="java.lang.String"/>
+	<field name="DATEDEMAND" class="java.lang.String"/>
+	<field name="STATUT" class="java.lang.String"/>
+	<field name="NOMEMBOSSE" class="java.lang.String"/>
+	<field name="SIG" class="java.lang.Object"/>
+	<field name="CODBEN" class="java.math.BigDecimal"/>
+	<field name="LIEUNAISS" class="java.lang.String"/>
+	<field name="NUMPIECE" class="java.lang.String"/>
+	<field name="PRENOMPERE" class="java.lang.String"/>
+	<field name="NOMMERE" class="java.lang.String"/>
+	<field name="PRENOMMERE" class="java.lang.String"/>
+	<field name="TELMOB" class="java.lang.String"/>
+	<field name="TELFIX" class="java.lang.String"/>
+	<field name="PROFESSION" class="java.lang.String"/>
+	<field name="NUMFORM" class="java.lang.String"/>
+	<field name="NUMCONTRAT" class="java.lang.String"/>
+	<field name="PROPRIO" class="java.lang.String"/>
+	<field name="NOMPERE" class="java.lang.String"/>
+	<field name="NUMCARTE" class="java.lang.String"/>
+	<field name="NUMLOTS" class="java.lang.String"/>
+	<field name="PROCURATION" class="oracle.sql.BLOB"/>
+	<field name="PIECE" class="java.lang.String"/>
+	<field name="SEXE" class="java.lang.String"/>
+	<field name="TITRE" class="java.lang.String"/>
+	<field name="NUMCLI" class="java.lang.String"/>
+	<field name="PRODUIT" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="96">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="92" width="799" height="3" backcolor="#51C238"/>
+			</frame>
+			<frame>
+				<reportElement x="2" y="17" width="638" height="63"/>
+				<staticText>
+					<reportElement x="1" y="6" width="632" height="53"/>
+					<textElement verticalAlignment="Middle" lineSpacing="Single">
+						<font fontName="Arial Rounded MT Bold" size="30"/>
+					</textElement>
+					<text><![CDATA[Liste des cartes commandées selon la date]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="-10" width="799" height="3" backcolor="#05A8E8"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="-95" width="799" height="3" backcolor="#1EB1D6"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="1" y="-89" width="799" height="3" backcolor="#34B007"/>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="-178" width="799" height="3" backcolor="#51C238"/>
+			</frame>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="7" width="800" height="26" backcolor="#10A7E3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<text><![CDATA[N° CMD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="11" width="100" height="19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<text><![CDATA[Date CMD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="11" width="100" height="19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<text><![CDATA[N° Client]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="11" width="150" height="19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<text><![CDATA[Nom & Prénoms]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="11" width="150" height="19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<text><![CDATA[Téléphone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="11" width="100" height="19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<text><![CDATA[N° Contrat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="624" y="11" width="100" height="19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="14"/>
+				</textElement>
+				<text><![CDATA[N° Formulaire]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27">
+			<textField>
+				<reportElement x="3" y="6" width="100" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUMCMD}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="1" y="3" width="800" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</frame>
+			<textField>
+				<reportElement x="81" y="3" width="100" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATECMD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="3" width="100" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUMCLI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="3" width="150" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NOM} +" "+$F{PRENOMS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="4" width="150" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="13"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TELMOB} +" "+$F{TELFIX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="537" y="4" width="100" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="15"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUMCONTRAT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="626" y="3" width="96" height="20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Arial Rounded MT Bold" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUMFORM}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="44"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="95"/>
+	</summary>
+</jasperReport>
